@@ -4,8 +4,8 @@ Lorem Ipsum
 
 ### code snippet
 ```lua
-foo
-bar
+local foo
+local bar
 ```
 ### example pico-8 .gif
 
