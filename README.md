@@ -28,8 +28,8 @@ local elementalsprites = {
 	alien = 13,
 	reptile = 24,
 	human = 15,
- canine = 36,
- evil_child = 1
+ 	canine = 36,
+ 	evil_child = 1
 }
 
 local intypes = {}
