@@ -4,8 +4,52 @@ Lorem Ipsum
 
 ### code snippet
 ```lua
-local foo
-local bar
+--battle sprites
+local enemies = {
+	"starman",
+	"elite starman",
+	"spiteful pigeon",
+	"coilsnake",
+	"hippie",
+	"lost dog"
+}
+
+local miniboss = {
+	"porky"
+}
+
+local finalboss = {
+	"giygas"
+}
+
+local elementalsprites = {
+	bird = 22,
+	alien = 13,
+	reptile = 24,
+	human = 15,
+ canine = 36,
+ evil_child = 1
+}
+
+local intypes = {}
+local k = 0
+for v in all(enemies) do
+	k+=1
+	intypes[v] = k
+end
+
+local newenemy = function(kind, hp, attack, defense, speed, psi, spr)
+	return {
+		kind = kind,
+		hp = hp,
+		attack = attack,
+		defense = defense,
+		speed = speed,
+		psi = psi,
+		spr = spr
+	}
+end
+
 ```
 ### example pico-8 .gif
 
