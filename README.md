@@ -1,6 +1,7 @@
 ### picobound.p8
 
-Lorem Ipsum
+Earthbound implemented in [Pico-8](https://www.lexaloffle.com/pico-8.php) 
+Forked and inspired by [Pico Monsters 1.11](https://www.lexaloffle.com/bbs/?pid=27211&tid=4046)
 
 ### code snippet
 ```lua
