@@ -54,7 +54,7 @@ end
 ```
 ### example pico-8 .gif
 
-![Image](https://github.com/galopeian1/picobound/blob/master/PICO-8_4.gif)
+![Image](https://github.com/galopeian1/picobound/blob/master/PICO-8_4.gif?raw=true)
 
 
 
