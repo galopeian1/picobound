@@ -3,6 +3,8 @@
 
 -- by ian galope 2017
 
+-- 4/18/2017
+
 -- credits
 -- fade to black effect by http://www.lexaloffle.com/bbs/?tid=2467
 --notes:
