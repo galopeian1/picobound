@@ -59,8 +59,9 @@ local elementalsprites = {
 	alien = 13,
 	reptile = 24,
 	human = 15,
- canine = 36,
- evil_child = 1
+ 	canine = 36,
+ 	evil_child = 1
+ 	final_alien = 1
 }
 
 local intypes = {}
@@ -93,7 +94,7 @@ local enemystats = {
 			74 
 	),
 	starman = enemies(
-			"alien",
+		"alien",
 			25,
 			55,
 			50,
@@ -102,35 +103,35 @@ local enemystats = {
 	),
 	hippie = enemies(
 		"human",
-		60,
-		55,
-		50,
-		20,
-		75
+			60,
+			55,
+			50,
+			20,
+			75
 	),
 	coilsnake = enemies(
 		"reptile",
-		25,
-		15,
-		20,
-		22,
-		80
+			25,
+			15,
+			20,
+			22,
+			80
 	),
 	porky = miniboss(
-	"evil_child",
-	75,
-	75,
-	80,
-	90,
-	100
+		"evil_child",
+			75,
+			75,
+			80,
+			90,
+			100
 	),
 	giygas = finalboss(
-	"alien",
-	200,
-	200,
-	210,
-	210,
-	300
+		"final_alien",
+			200,
+			200,
+			210,
+			210,
+			300
 	)
 }
 
