@@ -166,8 +166,8 @@ local ness = {
 	defense = flr((enemystats[starter].defense*2*lvl/100)+lvl+10),
 	attack = flr((enemystats[starter].attack*2*lvl/100)+lvl+10),
 	xp = 0,
-	move1 = "smash",
-	move2 = "taunt",
+	move1 = "attack",
+	move2 = "defend",
 	move3 = "pk rockin" ,
 	move4 = nil ,
 }
@@ -192,7 +192,7 @@ local attack = function(target, from, done, base, name)
 	target.curhp -= dmg
 	target.curhp = max(0, flr(target.curhp+0.5))
 	sfx(38,0)
-	if from == dialog.battle.monsters[1] then
+	if from == dialog.battle.enemies[1] then
 		add(funcs, {
 			t = 4,
 			update = function(self)
@@ -225,8 +225,9 @@ local attack = function(target, from, done, base, name)
 		end)
 	elseif crit then
 		text(from.name.." used "..name.."!", function()
-			text("a critical hit!", done)
+			text("...critical hit!", done)
 		end)
+			
 	else
 		text(from.name.." used "..name.."!", done)
 	end
