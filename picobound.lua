@@ -274,7 +274,7 @@ moves = {
 	end
 }
 movenames = {
-	"scratch", "pk thunder", "pk thunder", "burn", "leer", "counter", "punch", "bash", "takedown", "bubble"
+	"pk thunder", "pk thunder", "counter", "attack", "defend"
 }
 
 movesstats = {}
