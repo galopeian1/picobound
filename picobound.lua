@@ -234,9 +234,6 @@ local attack = function(target, from, done, base, name)
 end
 
 moves = {
-	scratch = function(target, from, done, base)
-		attack(target, from, done, base,"scratch")
-	end,
 	pk rockin = function(target, from, done, base)
 		attack(target, from, done, base,"pk rockin")
 	end,
@@ -257,24 +254,24 @@ moves = {
 			text("lowered "..target.name.."s def.", done)
 		end)
 	end,
-	smash = function(target, from, done, base)
-		attack(target, from, done, base, "smash")
+	local name = "bite"
+		text(from.name.."bit ness!", function()
+			target.defense-=1
+			target.defense=max(1,target.defense)
+			text("lowered "..target.name.."s def.", done)
+		end)
+	attack = function(target, from, done, base)
+		attack(target, from, done, base, "attack")
 	end,
-	punch = function(target, from, done, base)
-		attack(target, from, done, base, "punch")
-	end,
-	bash = function(target, from, done, base)
-		attack(target, from, done, base, "bash")
-	end,
-	bite = function(target, from, done, base)
-		attack(target, from, done, base, "bite")
+	defend = function(target, from, done, base)
+		attack(target, from, done, base, "defend")
 	end,
 	pk starstorm = function(target, from, done, base)
 		attack(target, from, done, base, "pk starstorm")
 	end
 }
 movenames = {
-	"pk thunder", "pk thunder", "counter", "attack", "defend"
+	"pk thunder", "pk thunder", "pk starstorm", "attack", "defend", "taunt" , "bite"
 }
 
 movesstats = {}
