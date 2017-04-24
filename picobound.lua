@@ -117,6 +117,14 @@ local enemystats = {
 			22,
 			80
 	),
+	lost_dog = enemies(
+		"canine", 
+			30,
+			20,
+			25,
+			25,
+			65
+	),
 	porky = miniboss(
 		"evil_child",
 			75,
@@ -133,6 +141,7 @@ local enemystats = {
 			210,
 			300
 	)
+		
 }
 
 local items = {
