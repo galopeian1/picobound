@@ -271,7 +271,7 @@ moves = {
 	end
 }
 movenames = {
-	"pk thunder", "pk thunder", "pk starstorm", "attack", "defend", "taunt" , "bite"
+	"pk thunder", "pk thunder", "pk starstorm", "attack", "defend", "taunt" , "bite", "pk rockin"
 }
 
 movesstats = {}
