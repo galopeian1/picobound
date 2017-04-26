@@ -53,7 +53,7 @@ local miniboss = {
 local finalboss = {
 	"giygas"
 }
-
+-- sprite types
 local elementalsprites = {
 	bird = 22,
 	alien = 13,
@@ -66,7 +66,7 @@ local elementalsprites = {
 
 local intypes = {}
 local k = 0
-for v in all(enemies) do
+for v in all(enemies, miniboss, finalboss) do
 	k+=1
 	intypes[v] = k
 end
