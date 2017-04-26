@@ -64,6 +64,8 @@ local elementalsprites = {
  	final_alien = 1
 }
 
+local kind = elementalsprites
+-- 
 local intypes = {}
 local k = 0
 for v in all(enemies, miniboss, finalboss) do
@@ -267,7 +269,7 @@ moves = {
 		text(from.name.."bit ness!", function()
 			target.defense-=1
 			target.defense=max(1,target.defense)
-			text("lowered "..target.name.."s def.", done)
+			text(..from.name.."bit"..target.name.., done)
 		end)
 	attack = function(target, from, done, base)
 		attack(target, from, done, base, "attack")
