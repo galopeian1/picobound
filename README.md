@@ -1,9 +1,9 @@
-### picobound.p8
+### picobound.p8.png
 
 Earthbound implemented in [Pico-8](https://www.lexaloffle.com/pico-8.php) 
 Forked and inspired by [Pico Monsters 1.11](https://www.lexaloffle.com/bbs/?pid=27211&tid=4046)
 
-### code snippet
+### code snippet -- I replaced Pico Monsters with enemy sprites
 ```lua
 --battle sprites
 local enemies = {
@@ -52,7 +52,7 @@ local newenemy = function(kind, hp, attack, defense, speed, psi, spr)
 end
 
 ```
-### example pico-8 .gif
+### dev .gif's
 
 ![Image](https://github.com/galopeian1/picobound/blob/master/PICO-8_4.gif?raw=true)
 
