@@ -167,7 +167,7 @@ local starter = "ness"
 local lvl = 2
 local ness = {
 	name = starter,
-	type = starter,
+	intype = starter,
 	level = lvl,
 	maxhp = flr((enemystats[starter].hp*2*lvl/100)+lvl+10),
 	curhp = flr((enemystats[starter].hp*2*lvl/100)+lvl+10),
@@ -543,29 +543,29 @@ function itemsmenu(donemenu)
 				end
 				local use = function()
 					-- smokeball
-					if p.items[self.sel] == 3 then
-						if dialog.battle then
-							text("you use the smokeball!", function()
-								text("you ran away!")
-								del(p.items, 3)
-								menus = {}
-								dialog.battle = nil
-								p.transition = nil
-							end)
-						else
-							text("this can only be used in battle!")
-						end
-						return
-					end
-					-- picoball
-					if p.items[self.sel] == 2 then
-						if #p.monsters == 4 then
-							text("you already have 4 monsters.", function()
-								text("release some monsters to catch new ones.")
-							end)
-						elseif dialog.battle then
-							if rnd() < 0.2+((dialog.battle.monsters[1].curhp/dialog.battle.monsters[1].maxhp))*0.2 then
-								text("clonk! oh no, you missed the "..dialog.battle.monsters[1].name.."!", function()
+					--if p.items[self.sel] == 3 then
+						--if dialog.battle then
+							--text("you use the smokeball!", function()
+								--text("you ran away!")
+								--del(p.items, 3)
+								--menus = {}
+								--dialog.battle = nil
+								--p.transition = nil
+							--end)
+						--else
+							--text("this can only be used in battle!")
+						--end
+						--return
+					--end
+					-- picoball (picomonsters, when picoball used, commented out)
+					--if p.items[self.sel] == 2 then
+						--if #p.monsters == 4 then
+							--text("you already have 4 monsters.", function()
+								--text("release some monsters to catch new ones.")
+							--end)
+						--elseif dialog.battle then
+							--if rnd() < 0.2+((dialog.battle.monsters[1].curhp/dialog.battle.monsters[1].maxhp))*0.2 then
+								--text("clonk! oh no, you missed the "..dialog.battle.monsters[1].name.."!", function()
 									del(p.items, 2)
 									-- del(menus, self)
 									donemenu()
@@ -574,7 +574,7 @@ function itemsmenu(donemenu)
 							else
 								music(-1)
 								sfx(37,0)
-								text("you caught the "..dialog.battle.monsters[1].name.."!", function()
+								text("placeholder"..dialog.battle.monsters[1].name.."!", function()
 									dialog.battle = nil
 									p.transition = nil
 									if p.x > 68 and p.y < 22 then
@@ -593,7 +593,7 @@ function itemsmenu(donemenu)
 						end
 						return
 					end
-					-- potion
+					-- potion//food
 					if p.items[self.sel] == 1 and p.monsters[1] then
 						-- select monster to heal
 						add(menus, {
